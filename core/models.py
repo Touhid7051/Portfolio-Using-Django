@@ -19,6 +19,8 @@ class About(models.Model):
 class Service(models.Model):
     name = models.CharField(max_length=100, verbose_name="Service name")
     description = models.TextField(verbose_name="About service")
+    area = models.TextField(verbose_name="Working Area")
+    Charge = models.CharField(max_length=10,verbose_name="Charges")
 
     def __str__(self):
         return self.name
