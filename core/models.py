@@ -99,3 +99,27 @@ class contactTitle(models.Model):
         return self.name
 
 
+class FooterText(models.Model):
+    name = models.CharField(max_length=100, verbose_name="Add Footer Text")
+
+    def __str__(self):
+        return self.name
+
+class SlideImage(models.Model):
+    name1 = models.CharField(max_length=100, verbose_name="Images name 1")
+    description1 = models.CharField(max_length=100, verbose_name="Images Description")
+    image1 = models.ImageField(upload_to="slideimage")
+    name2 = models.CharField(max_length=100, verbose_name="Images name 2")
+    description2 = models.CharField(max_length=100, verbose_name="Images Description 2")
+    image2 = models.ImageField(upload_to="slideimage")
+    name3 = models.CharField(max_length=100, verbose_name="Images name 3")
+    description3 = models.CharField(max_length=100, verbose_name="Images Description 3")
+    image3 = models.ImageField(upload_to="slideimage")
+
+
+    def __str__(self):
+        return self.name1
+
+
+
+

@@ -16,6 +16,9 @@ admin.site.register(portfolioTitle)
 admin.site.register(testimonialTitle)
 admin.site.register(contactTitle)
 admin.site.register(adressTitle)
+admin.site.register(FooterText)
+admin.site.register(SlideImage)
+
 
 
 

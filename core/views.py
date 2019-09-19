@@ -20,6 +20,8 @@ class HomeTemplateView(TemplateView):
         context['servicesT'] = serviceTitle.objects.first()
         context['portfolioT'] = portfolioTitle.objects.first()
         context['addressT'] = adressTitle.objects.first()
+        context['footer'] = FooterText.objects.first()
+        context['slideimage'] = SlideImage.objects.first()
 
 
 
