@@ -25,7 +25,7 @@ class Service(models.Model):
     #description = models.TextField(verbose_name="About service")
     area = models.TextField(verbose_name="Working Area")
     Charge = models.CharField(max_length=10,verbose_name="Charges")
-
+    image = models.ImageField(upload_to="services")
     def __str__(self):
         return self.name
 

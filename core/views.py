@@ -66,7 +66,7 @@ def user_login(request):
         else:
             print("Someone tried to login and failed.")
             print("They used username: {} and password: {}".format(username, password))
-            return HttpResponse("Invalid login details given")
+            return HttpResponse("Invalid login details given.Please Back to the Login page and Try again!")
     else:
         return render(request, 'core/login.html', {})
 

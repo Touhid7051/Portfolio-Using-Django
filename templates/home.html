@@ -165,8 +165,22 @@
 
                     <div class="col-md-4 col-sm-4">
 
-                        <div class="single-service wow fadeInDown" data-wow-delay="0.2s">
-                            <i class="icon icon-wallet"></i>
+                        <div class="single-service wow fadeInDown" >
+                            <a class="c " href="{{ service.image.url }}">
+                                <img src="{{ service.image.url }}" style="width:60px; height:60px;" >
+                                <style>
+                                    .c {
+                                         transition: filter .5s ease-in-out;
+                                         -webkit-filter: grayscale(0%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+                                            filter: grayscale(0%); /* FF 35+ */
+                                                            }
+                                    .c:hover {
+                                    -webkit-filter: grayscale(100%); /* Ch 23+, Saf 6.0+, BB 10.0+ */
+                                    filter: grayscale(100%); /* FF 35+ */
+                                         }
+
+                                </style>
+                            </a>
                             <h2>{{ service.name }}</h2>
                             <ul type="square">
                             {% for s in service.area_as_list %}
@@ -354,5 +368,14 @@
     padding-top: 0px;
     font-weight: 600;
     color: #333333;
+    }
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #000000;
+    background-color: #fff;
+}
 </style>
 {% endblock %}
