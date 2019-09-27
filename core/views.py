@@ -95,6 +95,8 @@ class HomeTemplateView(TemplateView):
         context['addressT'] = adressTitle.objects.first()
         context['footer'] = FooterText.objects.first()
         context['slideimage'] = SlideImage.objects.first()
+        context['uf'] = UserProfileInfo.objects.all()
+
 
 
 

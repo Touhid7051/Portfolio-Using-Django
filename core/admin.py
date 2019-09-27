@@ -18,7 +18,14 @@ admin.site.register(contactTitle)
 admin.site.register(adressTitle)
 admin.site.register(FooterText)
 admin.site.register(SlideImage)
-admin.site.register(UserProfileInfo)
+#admin.site.register(UserProfileInfo)
+
+
+@admin.register(UserProfileInfo)
+class UserProfileInfoAdmin(admin.ModelAdmin):
+    list_display = ('user', 'portfolio_site', 'profile_pic')
+    fields = ['user', 'portfolio_site', 'profile_pic']
+    search_fields =[ "user__username" ]
 
 
 
