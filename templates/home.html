@@ -344,23 +344,47 @@
         </div>
     </div>
 
+
+
+
+
+<div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center">
+                        <h2> Your Service Status </h2>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
 <div class="container">
-  <div class="jumbotron">
-    <h1>My job Tracker!</h1>
+  <div class="jumbotron" id="status">
+
+
+
+    <h1 style="font-size: 40px; color: red;">Tracking Result</h1>
     {% if user.is_authenticated %}
 
-      <h2>Hello {{ user.username }}</h2>
+      <h2 style="font-size: 20px; color: white;">Client: {{ user.username }}</h2>
 
 
 
-         <h2>{{ user.email }}</h2>
-         <h2>{{ request.user.userprofileinfo.msg }}</h2>
+         <h2 style="font-size: 12px; color: white; text-transform: lowercase;">Email: {{ user.email }}</h2>
+         <h2 style="font-size: 15px; color: white;">Service Ordered: {{ request.user.userprofileinfo.job }}</h2>
+         <h2 style="font-size: 15px; color: white;">Date of Order: {{ request.user.userprofileinfo.o_date }}</h2>
+         <h2 style="font-size: 15px; color: white;">Estimated Completion Date: {{ request.user.userprofileinfo.d_date }}</h2>
+         <h2 style="font-size: 17px; color: #7dff1a; font-weight: bold;">Current Status: {{ request.user.userprofileinfo.status }}</h2>
+
+         <p style="color: white; font-size: 12px;"> For any kind of project related queries, Please Contact us via forwardit@gmail.com or call us on +8801700000133(Whatsapp) </p>
 
 
 
 
       {% else %}
-        <h2>Register or Login if you'd like to</h2>
+        <h2 style="font-size: 10px; color: white;" >Register or Login to Track Your Service</h2>
     {% endif %}
   </div>
 </div>
@@ -387,5 +411,17 @@ body {
     color: #000000;
     background-color: #fff;
 }
+
+
+.jumbotron {
+    padding: 30px 15px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #390344;;
+    text-align: center;
+}
+
+
+
 </style>
 {% endblock %}

@@ -127,7 +127,11 @@ class UserProfileInfo(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
     portfolio_site = models.URLField(blank=True)
     profile_pic = models.ImageField(upload_to='profile_pics',blank=True)
-    msg = models.CharField(max_length=100, verbose_name="msg")
+    job = models.CharField(max_length=100, verbose_name="Service Name")
+    o_date = models.CharField(max_length=100, verbose_name="Date of Order")
+    d_date = models.CharField(max_length=100, verbose_name="Estimated Completion Date")
+
+    status = models.CharField(max_length=100, verbose_name="Current Status")
 
 
 
