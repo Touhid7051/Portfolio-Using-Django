@@ -23,8 +23,8 @@ admin.site.register(SlideImage)
 
 @admin.register(UserProfileInfo)
 class UserProfileInfoAdmin(admin.ModelAdmin):
-    list_display = ('user', 'portfolio_site', 'profile_pic')
-    fields = ['user', 'portfolio_site', 'profile_pic']
+    list_display = ('user', 'portfolio_site', 'profile_pic','msg')
+    fields = ['user', 'portfolio_site', 'profile_pic','msg']
     search_fields =[ "user__username" ]
 
 
