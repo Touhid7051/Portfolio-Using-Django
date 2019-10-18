@@ -17,7 +17,7 @@
 <nav class="navbar navbar-custom navbar-fixed-top">
     <div class="container">
         {% load static %}
-              <img src="{% static 'image\logo.PNG' %}" style="width:5%;height:22">
+              <img src="{% static 'image\lg.png' %}" style="width:5%;height:22">
 
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
@@ -95,7 +95,7 @@
         padding: 4px 0;
         border-bottom: 0;
         letter-spacing: 1px;
-        background: #6a1b77;
+        background: #ff7adc6b;
         -webkit-transition: background .5s ease-in-out, padding .5s ease-in-out;
         -moz-transition: background .5s ease-in-out, padding .5s ease-in-out;
         transition: background .5s ease-in-out, padding .5s ease-in-out;
@@ -119,9 +119,7 @@
 }
 
 
-.navbar-custom.navbar-fixed-top.top-nav-collapse {
-    background: #48034c;
-}
+
 
 .navbar-custom.top-nav-collapse .nav li a {
     color: #fff;
@@ -135,8 +133,20 @@
 
 .invitation-area {
     background: #48034c;
-    color: #ffffff;
+    color: #48034c;
 }
 
+
+@media only screen and (max-width: 767px) and (min-width: 480px){
+.navbar-custom {
+    background: rgb(174, 0, 185);
+    border-bottom: none;
+}
+}
+
+
+.navbar-custom.navbar-fixed-top.top-nav-collapse {
+    background: #f878ff;
+}
 
 </style>
