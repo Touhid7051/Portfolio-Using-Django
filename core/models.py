@@ -130,6 +130,9 @@ class UserProfileInfo(models.Model):
     job = models.CharField(max_length=100, verbose_name="Service Name")
     o_date = models.CharField(max_length=100, verbose_name="Date of Order")
     d_date = models.CharField(max_length=100, verbose_name="Estimated Completion Date")
+    fn = models.CharField(max_length=100, verbose_name="First name")
+    ln = models.CharField(max_length=100, verbose_name="Last name")
+    ads = models.CharField(max_length=100, verbose_name="Phone")
 
     status = models.CharField(max_length=100, verbose_name="Current Status")
 

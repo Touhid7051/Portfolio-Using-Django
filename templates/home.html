@@ -39,7 +39,7 @@
                 <div class="col-md-12">
                     <div class="welcome-text">
                         <div class="name-area wow fadeInDown" data-wow-delay="0.2s">Hello, my name is Touhid</div>
-                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create Innovative application with us</h1>
+                        <h1 class="wow fadeInDown" data-wow-delay="0.4s">Create Innovative application with us</wwwh1>
                         <a href="#about" class="my-btn-1 wow fadeInDown" data-wow-delay="0.6s">Learn more</a>
                         <a href="#contact" class="my-btn-2 wow fadeInDown" data-wow-delay="0.8s">Get in touch</a>
                     </div>
@@ -273,17 +273,7 @@
 
     {#    Contact section#}
 
-    <div class="invitation-area section-padding">
-        <div class="container">
-            <div class="row">
-                <div class="single-invite text-center">
-                    <h2>{{addressT.name}}</h2>
-                    <p>{{ contact.description }}</p>
-                    <a href="#contact" class="my-btn-3">Or Get started</a>
-                </div>
-            </div>
-        </div>
-    </div>
+
 
     <div id="contact" class="contact-area section-padding">
         <div class="container">
@@ -294,7 +284,27 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <div class="invitation-area section-padding">
+        <div class="container">
             <div class="row">
+                <div class="single-invite text-center">
+                    <h2>{{addressT.name}}</h2>
+                    <p>{{ contact.description }}</p>
+                    <li><a class="navbar-link" href="{% url 'core:register' %}">Register Now</a></li>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<!--            <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 box-contact-form">
 
                     <form id="contact-form" method="post" action="#">
@@ -340,7 +350,7 @@
 
                 </div>
 
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -378,7 +388,7 @@
          <h2 style="font-size: 15px; color: white;">Estimated Completion Date: {{ request.user.userprofileinfo.d_date }}</h2>
          <h2 style="font-size: 17px; color: #7dff1a; font-weight: bold;">Current Status: {{ request.user.userprofileinfo.status }}</h2>
 
-         <p style="color: white; font-size: 12px;"> For any kind of project related queries, Please Contact us via forwardit@gmail.com or call us on +8801700000133(Whatsapp) </p>
+         <p style="color: white; font-size: 12px;"> For any kind of project related queries, Please Contact us at {{ contact.description }} </p>
 
 
 
